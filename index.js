@@ -13,6 +13,11 @@ const Url = require("./models/url");
 // Create a new Express application instance
 const app = express();
 
+// remove cors origin error 
+const cors = require("cors");
+
+app.use(cors());
+
 // Define the port number to listen on, using the environment variable PORT or defaulting to 8080
 const PORT = process.env.PORT || 8080;
 
